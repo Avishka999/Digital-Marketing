@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flood Detect – Flood Detection & Early Warning</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation (This header appears on every page) -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Flood Detect</div>
+      <ul class="nav-menu">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="features.html">Features</a></li>
+        <li><a href="overview.html">Overview</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="menu-toggle">
+        <span></span><span></span><span></span>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section with Background Video -->
+  <section class="hero">
+    <div class="hero-bg">
+      <!-- Local background video -->
+      <video autoplay muted loop playsinline id="bgVideo" poster="https://via.placeholder.com/1920x1080/005f73/ffffff?text=FloodDetect+Poster">
+        <source src="src/v7.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+      </video>
+      <!-- (Optional) Fallback image if video fails -->
+      <img class="video-fallback" src="https://via.placeholder.com/1920x1080/005f73/ffffff?text=FloodDetect+Background" alt="FloodDetect Background">
+    </div>
+    <div class="hero-content">
+      <h1>Flood Detect</h1>
+      <p>Flood Detection &amp; Early Warning System</p>
+      <a href="overview.html" class="btn">Discover More</a>
+    </div>
+  </section>
+
+
+
+  <section class="why-choose fancy-section">
+    <div class="why-choose__content fade-zoom">
+      <h2>Why Choose FloodDetect?</h2>
+      <p class="justify-text">
+        Flood Detect harnesses satellite imagery and real-time rainfall data via API calls 
+        to predict flood events. Our system provides early warnings and actionable insights 
+        to help communities and authorities respond effectively.
+      </p>
+    </div>
+    <div class="why-choose__image fade-zoom">
+      <img src="src/im1.jpg" alt="Flood Detection in Action">
+    </div>
+  </section>
+  
+  
+  
+
+  <!-- Additional Features Section: Side-by-Side Blocks -->
+  <section class="side-by-side">
+    <!-- Block 1: Image Left, Text Right -->
+    <div class="side-by-side__image">
+      <img src="src/im2.jpg" alt="Satellite Imagery">
+    </div>
+    <div class="side-by-side__content  fade-zoom" data-aos="fade-right" data-aos-duration="1000">
+      <h2>Real-Time Satellite Data</h2>
+      
+      <p class="justify-text">FloodDetect harnesses cutting-edge, high-resolution satellite imagery to continuously monitor water levels over expansive areas. 
+        By analyzing this real-time data, our platform delivers precise, actionable alerts that empower communities and local authorities to take proactive measures against flood risks. 
+        This state of the art technology ensures you stay informed about emerging threats, enabling swift and effective flood prevention strategies.
+      </p>
+    </div>
+    <section class="side-by-side reverse">
+        <!-- Block 2: Video Left, Text Right -->
+        <div class="side-by-side__image  fade-zoom" data-aos="fade-right" data-aos-duration="1000">
+          <div class="video-container">
+            <!-- Local video file autoplaying in a loop, muted, and inline for mobile -->
+            <video 
+              autoplay 
+              loop 
+              muted 
+              playsinline 
+              id="analyticsVideo" 
+              poster="https://via.placeholder.com/800x450/005f73/ffffff?text=Loading+Video"
+            >
+              <source src="src/v9.mp4" type="video/mp4">
+              Your browser does not support HTML5 video.
+            </video>
+          </div>
+        </div>
+        <div class="side-by-side__content  fade-zoom" data-aos="fade-right" data-aos-duration="1000">
+          <h2>Predictive Analytics in Action</h2>
+          <p class="justify-text">
+            Observe how Flood Detect processes real time data to forecast flood risks accurately. By integrating advanced algorithms with continuously updated satellite and rainfall information, our system empowers communities and emergency services to take prompt, proactive measures. This ensures you stay one step ahead of potential disasters, minimizing damage and safeguarding lives.
+          </p>
+        </div>
+      </section>
+      
+
+  <section class="side-by-side">
+    <!-- Block 3: Image Left, Text Right -->
+    <div class="side-by-side__image fade-zoom" data-aos="fade-right" data-aos-duration="1000">
+        <div class="video-container">
+            <!-- Local video file autoplaying in a loop, muted, and inline for mobile -->
+            <video 
+              autoplay 
+              loop 
+              muted 
+              playsinline 
+              id="analyticsVideo" 
+              poster="https://via.placeholder.com/800x450/005f73/ffffff?text=Loading+Video"
+            >
+              <source src="src/v10.mp4" type="video/mp4">
+              Your browser does not support HTML5 video.
+            </video>
+          </div>
+    </div>
+    <div class="side-by-side__content  fade-zoom" data-aos="fade-right" data-aos-duration="1000">
+      <h2>Actionable Insights</h2>
+
+      <p class="justify-text">
+      Flood Detect's intuitive dashboard transforms complex environmental data into clear, actionable insights. With real-time visualizations, interactive charts, and easy-to-understand metrics, our platform enables decision makers to assess flood risk levels and historical trends. This powerful clarity ensures that communities, emergency services, and government agencies are always equipped with the precise information needed to plan, prepare, and respond long before disaster strikes.
+      </p>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 FloodDetect. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

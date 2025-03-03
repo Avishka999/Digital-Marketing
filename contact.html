@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FloodDetect – Contact</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation (Same on every page) -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">FloodDetect</div>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="features.html">Features</a></li>
+        <li><a href="overview.html">Overview</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+      <div class="menu-toggle">
+        <span></span><span></span><span></span>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-bg">
+      <!-- Replace with your high-quality background image -->
+      <img src="src/im15.jpg" 
+           alt="Contact Background" style="width:100%; height:100%; object-fit:cover;">
+    </div>
+    <div class="hero-content">
+      <h1>Contact Us</h1>
+      <p>We're here to help and answer your questions.</p>
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section class="intro" style="background: #fff;">
+    <div class="container">
+      <h2>Get in Touch</h2>
+      <p class="justify-text">
+        Whether you have a question about our technology, need support, or wish to explore partnership opportunities, please fill out the form below and we’ll get back to you shortly.
+      </p>
+      <!-- Form now directs users to the Google Form -->
+      <form action="https://docs.google.com/forms/d/e/1FAIpQLScoO1PWlpWD6cjwDFp_NQC4MgiJaf4EBf6rWGJyGlP9P4SA3w/viewform?usp=header" method="get" target="_blank" style="max-width:600px; margin: 0 auto;">
+        <div style="margin-bottom:15px;">
+          <label for="name" style="display:block; margin-bottom:5px; font-weight:600;">Name:</label>
+          <input type="text" id="name" name="name" placeholder="Your Name" required style="width:100%; padding:10px; border:1px solid #ccc; border-radius:4px;">
+        </div>
+        <div style="margin-bottom:15px;">
+          <label for="email" style="display:block; margin-bottom:5px; font-weight:600;">Email:</label>
+          <input type="email" id="email" name="email" placeholder="Your Email" required style="width:100%; padding:10px; border:1px solid #ccc; border-radius:4px;">
+        </div>
+        <div style="margin-bottom:15px;">
+          <label for="subject" style="display:block; margin-bottom:5px; font-weight:600;">Subject:</label>
+          <input type="text" id="subject" name="subject" placeholder="Subject" required style="width:100%; padding:10px; border:1px solid #ccc; border-radius:4px;">
+        </div>
+        <div style="margin-bottom:15px;">
+          <label for="message" style="display:block; margin-bottom:5px; font-weight:600;">Message:</label>
+          <textarea id="message" name="message" placeholder="Your Message" rows="6" required style="width:100%; padding:10px; border:1px solid #ccc; border-radius:4px;"></textarea>
+        </div>
+        <div style="text-align:center;">
+          <button type="submit" class="btn">Send Message</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Contact Information Section -->
+  <section class="side-by-side" style="background: #fff; border: none; padding:40px 20px;">
+    <div class="side-by-side__content" style="max-width:100%; text-align:center;">
+      <h2>Our Contact Information</h2>
+      <p style="font-size:1.1em; margin-bottom:15px;">
+        FloodDetect Headquarters<br>
+        1234 River Road, Suite 567<br>
+        Flood City, FC 12345
+      </p>
+      <p style="font-size:1.1em; margin-bottom:15px;">
+        Phone: <a href="tel:+1234567890" style="color:#005f73;">+1 234 567 890</a><br>
+        Email: <a href="mailto:info@flooddetect.com" style="color:#005f73;">info@flooddetect.com</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 FloodDetect. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
