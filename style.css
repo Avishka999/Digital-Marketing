@@ -442,6 +442,7 @@ footer p {
    Responsive Styles
 -------------------------------------------------- */
 @media (max-width: 768px) {
+  /* Mobile Navigation */
   .nav-menu {
     flex-direction: column;
     background: rgba(0,95,115,0.9);
@@ -450,6 +451,12 @@ footer p {
     left: 0;
     width: 100%;
     display: none;
+    text-align: center;
+    padding: 15px 0;
+  }
+
+  .nav-menu li {
+    margin: 15px 0;
   }
 
   .nav-menu.active {
@@ -460,6 +467,12 @@ footer p {
     display: block;
   }
 
+  /* Adjust Hero Section for Mobile */
+  .hero-content {
+    padding: 0 20px;
+    text-align: center;
+  }
+
   .hero-content h1 {
     font-size: 2.5em;
   }
@@ -468,15 +481,28 @@ footer p {
     font-size: 1.2em;
   }
 
+  /* Stack Side-by-Side Sections Vertically */
   .side-by-side,
   .side-by-side.reverse {
     flex-direction: column;
+    align-items: center;
   }
 
   .side-by-side__image,
   .side-by-side__content {
     max-width: 100%;
     margin-bottom: 20px;
+    padding: 0 10px;
+  }
+
+  /* Improve overall spacing on smaller devices */
+  .container {
+    padding: 0 10px;
+  }
+
+  .intro,
+  .cta {
+    padding: 40px 10px;
   }
 }
 
@@ -493,7 +519,6 @@ footer p {
   transform: scale(1);
   opacity: 1;
 }
-
 
 /* --------------------------------------------------
    About Page Overrides: Normal Image & Video Sizes
@@ -516,8 +541,4 @@ footer p {
   width: 100%;
   height: 100%;
   object-fit: cover;
-
-
-
-  
 }
