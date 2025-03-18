@@ -22,13 +22,13 @@ a {
 
 /* Container Utility */
 .container {
-  max-width: 1200px;  /* Limit the width to prevent stretching */
-  margin: 0 auto;     /* Center the container */
-  padding: 0 20px;    /* Add some padding to the sides */
+  max-width: 1200px;  /* Limit width for large screens */
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 /* --------------------------------------------------
-   Footer (Unified)
+   Footer
 -------------------------------------------------- */
 footer {
   background-color: #1b212c;
@@ -36,19 +36,16 @@ footer {
   text-align: center;
   padding: 20px 0;
   width: 100%;
-  position: relative;
 }
-
 footer p {
   font-size: 1rem;
-  margin: 0;
 }
 
 /* --------------------------------------------------
    Navigation Bar
 -------------------------------------------------- */
 .navbar {
-  position: absolute;     /* Over hero video if on the home page */
+  position: fixed;  /* Fixed for better mobile accessibility */
   top: 0;
   width: 100%;
   padding: 20px;
@@ -56,7 +53,7 @@ footer p {
   justify-content: space-between;
   align-items: center;
   background: rgba(0,95,115,0.8);
-  z-index: 10;
+  z-index: 100;
 }
 
 .logo {
@@ -119,12 +116,12 @@ footer p {
 #bgVideo {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* Or cover if you want it to fill the container */
+  object-fit: cover;
   filter: brightness(0.7);
 }
 
 .video-fallback {
-  display: none; /* Show this if the video fails (toggle via JS if needed) */
+  display: none;
 }
 
 .hero-content {
@@ -149,7 +146,9 @@ footer p {
   text-shadow: 1px 1px 6px rgba(0,0,0,0.6);
 }
 
-/* Reusable .btn style */
+/* --------------------------------------------------
+   Buttons
+-------------------------------------------------- */
 .btn {
   background: #ffdd57;
   color: #005f73;
@@ -166,7 +165,7 @@ footer p {
 }
 
 /* --------------------------------------------------
-   Base Fancy Section
+   Fancy Sections & Animations
 -------------------------------------------------- */
 .fancy-section {
   background: linear-gradient(135deg, rgba(0,95,115,0.1) 0%, rgba(0,95,115,0.05) 100%);
@@ -176,7 +175,6 @@ footer p {
   align-items: center;
   justify-content: space-between;
   margin-bottom: 40px;
-  position: relative;
 }
 
 .justify-text {
@@ -187,7 +185,8 @@ footer p {
 .why-choose__image {
   flex: 1 1 45%;
   max-width: 45%;
-  opacity: 0; /* Hidden initially */
+  opacity: 0;
+  transition: opacity 0.8s, transform 0.8s;
 }
 
 .why-choose__content {
@@ -214,10 +213,9 @@ footer p {
   margin: 0 auto;
 }
 
-/* Zoom Animation Classes */
 .fade-zoom {
   transform: scale(0.8);
-  transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+  opacity: 0;
 }
 
 .fade-zoom.animate {
@@ -237,8 +235,8 @@ footer p {
 .intro h2 {
   font-size: 2.5em;
   color: #005f73;
-  margin-top: 40px;    /* Extra space above heading */
-  margin-bottom: 20px; /* Space below heading */
+  margin-top: 40px;
+  margin-bottom: 20px;
 }
 
 .intro p {
@@ -248,7 +246,6 @@ footer p {
   line-height: 1.6;
 }
 
-/* Make the intro image bigger */
 .intro img {
   width: 60%;
   max-width: 800px;
@@ -257,12 +254,12 @@ footer p {
 }
 
 /* --------------------------------------------------
-   Side-by-Side Sections (Images/Videos + Text)
+   Side-by-Side Sections
 -------------------------------------------------- */
 .side-by-side {
   display: flex;
   flex-wrap: wrap;
-  align-items: justify;
+  align-items: center;
   justify-content: space-between;
   padding: 60px 20px;
   background: #fff;
@@ -278,6 +275,7 @@ footer p {
 .side-by-side__image img {
   width: 100%;
   border-radius: 8px;
+  transition: transform 0.4s, box-shadow 0.4s;
 }
 
 .side-by-side__content {
@@ -288,55 +286,14 @@ footer p {
   font-size: 1.8em;
   color: #005f73;
   margin-bottom: 10px;
+  transition: color 0.4s;
 }
 
 .side-by-side__content p {
   font-size: 1em;
   color: #555;
   line-height: 1.5;
-}
-
-/* Reverse the order for an alternating layout */
-.side-by-side.reverse {
-  flex-direction: row-reverse;
-}
-
-/* Video container for embedded videos */
-.video-container {
-  position: relative;
-  width: 100%;
-  padding-bottom: 56.25%; /* 16:9 ratio */
-  height: 0;
-  overflow: hidden;
-  border-radius: 8px; /* Slight rounding for a modern look */
-}
-
-.video-container video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 80%;
-  height: 80%;
-  object-fit: cover; /* or 'contain' if you prefer the entire frame in view */
-}
-
-/* --------------------------------------------------
-   Optional Hover Animations & Overlays
--------------------------------------------------- */
-
-/* 1. Zoom & Shadow on Image Hover */
-.side-by-side__image img {
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-.side-by-side__image img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-}
-
-/* 2. Slide Text on Hover */
-.side-by-side__content p {
-  transition: transform 0.3s ease, color 0.3s ease;
+  transition: transform 0.3s, color 0.3s;
 }
 
 .side-by-side__content p:hover {
@@ -344,49 +301,32 @@ footer p {
   color: #ffdd57;
 }
 
-/* 3. Fade-In Overlay on Image Hover */
-.image-overlay-container {
-  position: relative;
-  display: inline-block;
-  overflow: hidden;
-}
-
-.image-overlay-container img {
-  width: 80%;
-  display: block;
-}
-
-.image-overlay-container .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 95, 115, 0.7);
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 0.4s ease;
-}
-
-.image-overlay-container:hover .overlay {
-  opacity: 1;
-}
-
-/* 4. Combined Example: Slight zoom on image + color shift on heading */
-.side-by-side__image img:hover {
+.side-by-side__image:hover {
   transform: scale(1.03);
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-.side-by-side__content h2 {
-  transition: color 0.4s ease;
+.side-by-side.reverse {
+  flex-direction: row-reverse;
 }
 
-.side-by-side__content h2:hover {
-  color: #ffdd57;
+/* Video Container */
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* --------------------------------------------------
@@ -396,10 +336,9 @@ footer p {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 80vh;         /* Occupies 80% of viewport height */
-  background-color: #fff;   /* or #f7f7f7 if you prefer */
-  margin: 0;                /* Remove extra margins */
-  padding: 0 20px;          /* Horizontal padding */
+  min-height: 80vh;
+  background-color: #fff;
+  padding: 0 20px;
   text-align: center;
 }
 
@@ -424,14 +363,13 @@ footer p {
 
 .cta .btn {
   background: none;
-  color: #6c63ff;  /* Purple color for the link text */
+  color: #6c63ff;
   font-size: 1.2em;
   font-weight: 700;
-  text-decoration: none;
   border: none;
   cursor: pointer;
   padding: 0;
-  transition: color 0.3s ease;
+  transition: color 0.3s;
 }
 
 .cta .btn:hover {
@@ -439,67 +377,63 @@ footer p {
 }
 
 /* --------------------------------------------------
-   Responsive Styles
+   Responsive Styles (Mobile)
 -------------------------------------------------- */
 @media (max-width: 768px) {
-  /* Mobile Navigation */
+  /* Navigation adjustments */
+  .navbar {
+    padding: 15px 20px;
+  }
   .nav-menu {
     flex-direction: column;
     background: rgba(0,95,115,0.9);
-    position: absolute;
-    top: 70px;
+    position: fixed;
+    top: 60px;
     left: 0;
     width: 100%;
     display: none;
     text-align: center;
-    padding: 15px 0;
+    padding: 20px 0;
+    z-index: 99;
   }
-
   .nav-menu li {
     margin: 15px 0;
   }
-
   .nav-menu.active {
     display: flex;
   }
-
   .menu-toggle {
     display: block;
   }
-
-  /* Adjust Hero Section for Mobile */
-  .hero-content {
-    padding: 0 20px;
-    text-align: center;
+  
+  /* Hero section tweaks */
+  .hero {
+    height: 80vh;
   }
-
   .hero-content h1 {
     font-size: 2.5em;
   }
-
   .hero-content p {
     font-size: 1.2em;
   }
-
-  /* Stack Side-by-Side Sections Vertically */
+  
+  /* Side-by-Side: Stack vertically */
   .side-by-side,
   .side-by-side.reverse {
     flex-direction: column;
     align-items: center;
   }
-
   .side-by-side__image,
   .side-by-side__content {
     max-width: 100%;
     margin-bottom: 20px;
     padding: 0 10px;
   }
-
-  /* Improve overall spacing on smaller devices */
+  
+  /* Adjust overall spacing */
   .container {
     padding: 0 10px;
   }
-
   .intro,
   .cta {
     padding: 40px 10px;
@@ -507,34 +441,19 @@ footer p {
 }
 
 /* --------------------------------------------------
-   Scroll-Triggered Zoom Animation
--------------------------------------------------- */
-.fade-zoom {
-  transform: scale(0.8);
-  opacity: 0;
-  transition: transform 0.8s ease-out, opacity 0.8s ease-out;
-}
-
-.fade-zoom.animate {
-  transform: scale(1);
-  opacity: 1;
-}
-
-/* --------------------------------------------------
-   About Page Overrides: Normal Image & Video Sizes
-   (Only applied when body has class "about-page")
+   About Page Overrides (if needed)
 -------------------------------------------------- */
 .about-page .intro img {
-  width: 40%;         /* Reduced width compared to default */
-  max-width: 600px;    /* Smaller maximum width */
+  width: 40%;
+  max-width: 600px;
 }
 
 .about-page .side-by-side__image img {
-  max-width: 500px;    /* Reduce maximum width for side-by-side images */
+  max-width: 500px;
 }
 
 .about-page .video-container {
-  padding-bottom: 45%;  /* Reduce height of video container for a smaller video */
+  padding-bottom: 45%;
 }
 
 .about-page .video-container video {
